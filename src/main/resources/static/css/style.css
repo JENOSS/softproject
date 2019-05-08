@@ -20999,8 +20999,8 @@ dl li {
   background-size: cover;
 }
 
-.auth.lock-full-bg {
-  background: url("../images/auth/lockscreen-bg.jpg");
+.auth.Widescreen-full-bg {
+  background: url("../images/auth/Widescreen-Wallpaper-bg.jpeg");
   background-size: cover;
 }
 
