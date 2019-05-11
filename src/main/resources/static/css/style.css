@@ -8985,12 +8985,17 @@ h5, .h5 {
 h6, .h6 {
   font-size: 1rem;
 }
-
+h7, .h7 {
+  background-color: rgba(255, 255, 255, 0.3);
+  padding:0.3rem;
+  color:rgb(0, 0, 0);
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 200;
+}
 .lead {
   font-size: 1.25rem;
   font-weight: 300;
 }
-
 .display-1 {
   font-size: 6rem;
   font-weight: 300;
@@ -20989,18 +20994,26 @@ dl li {
 /*-------------------------------------------------------------------*/
 /* === Landing screens === */
 /* Auth */
-.auth .login-half-bg {
-  background: url("../images/auth/login-bg.jpg");
+.background {
+  background-image: url('https://source.unsplash.com/category/film/1600x900');
   background-size: cover;
+  background-clip: border-box;
+  min-height:100vh;
+  margin:0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  /*background-image: url('../../images/auth/login-bg.jpg');*/
 }
-
-.auth .register-half-bg {
-  background: url("../images/auth/register-bg.jpg");
-  background-size: cover;
+.layer {
+  padding: 400px;
+  font-weight: bold;
+  /*text-align: center;*/
+  background-color: rgba( 0, 0, 0, 0.5 );
 }
-
-.auth.Widescreen-full-bg {
-  background: url("../images/auth/Widescreen-Wallpaper-bg.jpeg");
+.auth .Widescreen-full-bg {
+  background: url("../images/auth/bg.jpeg");
   background-size: cover;
 }
 
