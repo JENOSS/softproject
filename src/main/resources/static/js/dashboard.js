@@ -21,7 +21,7 @@
             label: 'Sales',
             data: [29, 40, 37, 48, 64, 58, 70, 57, 80],
             borderColor: [
-              '#4d83ff'
+              '#7859df'
             ],
             borderWidth: 2,
             fill: false,
