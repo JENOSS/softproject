@@ -67,9 +67,9 @@ public class TestController {
         return "welcome";
     }
 
-    @GetMapping("/project")
+    @GetMapping("/project_home")
     public String project(Model model) {
         //model.addAttribute("userForm", new User());
-        return "project";
+        return "project_home";
     }
 }
