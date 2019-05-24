@@ -32,13 +32,17 @@
                 </button>
             </div>
         </div>
+
         <div class="navbar-menu-wrapper d-flex align-items-center justify-content-end">
+            <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">Progress</span> &emsp;&emsp;
             <ul class="navbar-nav mr-lg-4 w-100">
-                <li class="nav-item nav-search d-none d-lg-block w-100">
-                    <div class="input-group"></div>
-                    <div class="input-group-prepend"></div>
+                <li class="nav-item nav-search d-none d-lg-block w-75">
+                            <div class="progress">
+                                <div class="progress-bar bg-primary" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
                 </li>
             </ul>
+
             <ul class="navbar-nav navbar-nav-right">
 
                 <li class="nav-item nav-profile dropdown">
@@ -81,7 +85,6 @@
                         <span class="menu-title">저장소</span>
                     </a>
                 </li>
-
                 <li class="nav-item">
                     <a class="nav-link" href="notice">
                         <i class="mdi mdi-view-headline menu-icon"></i>
@@ -126,7 +129,7 @@
                         <ul class="nav flex-column sub-menu">
                             <li class="nav-item"><a class="nav-link" href="login"> Login </a></li>
                             <li class="nav-item"><a class="nav-link" href="register"> Register </a></li>
-                            <li class="nav-item"><a class="nav-link" href="project_home"> project home </a></li>
+                            <li class="nav-item"><a class="nav-link" href="projectHome"> project home </a></li>
                         </ul>
                     </div>
                 </li>
@@ -136,58 +139,224 @@
         <div class="main-panel">
             <div class="content-wrapper">
                 <div class="row">
-                    <div class="col-md-18 grid-margin">
-                        <div class="d-flex justify-content-between flex-wrap">
-                            <div class="d-flex align-items-end flex-wrap">
-                                <div class="card ml-lg-auto">
-                                    <div class="card-body"><br>
-                                        <h1>프로젝트 진행률</h1><br>
-                                        <p class="mb-md-0">어기영차</p>
-                                        <div class="progress">
-                                            <div class="progress-bar bg-primary" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                    <div class="col-md-12 grid-margin stretch-card">
+                        <div class="card">
+                            <div class="card-body dashboard-tabs p-0">
+                                <ul class="nav nav-tabs px-4" role="tablist">
+                                    <li class="nav-item">
+                                        <a class="nav-link active" id="overview-tab" data-toggle="tab" href="#overview" role="tab" aria-controls="overview" aria-selected="true">Overview</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" id="sales-tab" data-toggle="tab" href="#sales" role="tab" aria-controls="sales" aria-selected="false">Sales</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" id="purchases-tab" data-toggle="tab" href="#purchases" role="tab" aria-controls="purchases" aria-selected="false">Purchases</a>
+                                    </li>
+                                </ul>
+                                <div class="tab-content py-0 px-0">
+                                    <div class="tab-pane fade show active" id="overview" role="tabpanel" aria-labelledby="overview-tab">
+                                        <div class="d-flex flex-wrap justify-content-xl-between">
+                                            <div class="d-none d-xl-flex border-md-right flex-grow-1 align-items-center justify-content-center p-3 item">
+                                                <i class="mdi mdi-calendar-heart icon-lg mr-3 text-primary"></i>
+                                                <div class="d-flex flex-column justify-content-around">
+                                                    <small class="mb-1 text-muted">Start date</small>
+                                                    <div class="dropdown">
+                                                        <a class="btn btn-secondary dropdown-toggle p-0 bg-transparent border-0 text-dark shadow-none font-weight-medium" href="#" role="button" id="dropdownMenuLinkA" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                            <h5 class="mb-0 d-inline-block">26 Jul 2018</h5>
+                                                        </a>
+                                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuLinkA">
+                                                            <a class="dropdown-item" href="#">12 Aug 2018</a>
+                                                            <a class="dropdown-item" href="#">22 Sep 2018</a>
+                                                            <a class="dropdown-item" href="#">21 Oct 2018</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="d-flex border-md-right flex-grow-1 align-items-center justify-content-center p-3 item">
+                                                <i class="mdi mdi-currency-usd mr-3 icon-lg text-danger"></i>
+                                                <div class="d-flex flex-column justify-content-around">
+                                                    <small class="mb-1 text-muted">Revenue</small>
+                                                    <h5 class="mr-2 mb-0">$577545</h5>
+                                                </div>
+                                            </div>
+                                            <div class="d-flex border-md-right flex-grow-1 align-items-center justify-content-center p-3 item">
+                                                <i class="mdi mdi-eye mr-3 icon-lg text-success"></i>
+                                                <div class="d-flex flex-column justify-content-around">
+                                                    <small class="mb-1 text-muted">Total views</small>
+                                                    <h5 class="mr-2 mb-0">9833550</h5>
+                                                </div>
+                                            </div>
+                                            <div class="d-flex border-md-right flex-grow-1 align-items-center justify-content-center p-3 item">
+                                                <i class="mdi mdi-download mr-3 icon-lg text-warning"></i>
+                                                <div class="d-flex flex-column justify-content-around">
+                                                    <small class="mb-1 text-muted">Downloads</small>
+                                                    <h5 class="mr-2 mb-0">2233783</h5>
+                                                </div>
+                                            </div>
+                                            <div class="d-flex py-3 border-md-right flex-grow-1 align-items-center justify-content-center p-3 item">
+                                                <i class="mdi mdi-flag mr-3 icon-lg text-danger"></i>
+                                                <div class="d-flex flex-column justify-content-around">
+                                                    <small class="mb-1 text-muted">Flagged</small>
+                                                    <h5 class="mr-2 mb-0">3497843</h5>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="card ml-auto">
-                                    <div class="card-body">
-                                        <h4 class="card-title">프로젝트 일정</h4>
-                                        <div class="table-responsive">
-                                            <table class="table table-hover">
-                                                <thead>
-                                                <tr>
-                                                    <th>User</th>
-                                                    <th>Product</th>
-                                                </tr>
-                                                </thead>
-                                                <tbody>
-                                                <tr>
-                                                    <td>Jacob</td>
-                                                    <td>Photoshop</td>
-                                                </tr>
-                                                </tbody>
-                                            </table>
+                                    <div class="tab-pane fade" id="sales" role="tabpanel" aria-labelledby="sales-tab">
+                                        <div class="d-flex flex-wrap justify-content-xl-between">
+                                            <div class="d-none d-xl-flex border-md-right flex-grow-1 align-items-center justify-content-center p-3 item">
+                                                <i class="mdi mdi-calendar-heart icon-lg mr-3 text-primary"></i>
+                                                <div class="d-flex flex-column justify-content-around">
+                                                    <small class="mb-1 text-muted">Start date</small>
+                                                    <div class="dropdown">
+                                                        <a class="btn btn-secondary dropdown-toggle p-0 bg-transparent border-0 text-dark shadow-none font-weight-medium" href="#" role="button" id="dropdownMenuLinkA" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                            <h5 class="mb-0 d-inline-block">26 Jul 2018</h5>
+                                                        </a>
+                                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuLinkA">
+                                                            <a class="dropdown-item" href="#">12 Aug 2018</a>
+                                                            <a class="dropdown-item" href="#">22 Sep 2018</a>
+                                                            <a class="dropdown-item" href="#">21 Oct 2018</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="d-flex border-md-right flex-grow-1 align-items-center justify-content-center p-3 item">
+                                                <i class="mdi mdi-download mr-3 icon-lg text-warning"></i>
+                                                <div class="d-flex flex-column justify-content-around">
+                                                    <small class="mb-1 text-muted">Downloads</small>
+                                                    <h5 class="mr-2 mb-0">2233783</h5>
+                                                </div>
+                                            </div>
+                                            <div class="d-flex border-md-right flex-grow-1 align-items-center justify-content-center p-3 item">
+                                                <i class="mdi mdi-eye mr-3 icon-lg text-success"></i>
+                                                <div class="d-flex flex-column justify-content-around">
+                                                    <small class="mb-1 text-muted">Total views</small>
+                                                    <h5 class="mr-2 mb-0">9833550</h5>
+                                                </div>
+                                            </div>
+                                            <div class="d-flex border-md-right flex-grow-1 align-items-center justify-content-center p-3 item">
+                                                <i class="mdi mdi-currency-usd mr-3 icon-lg text-danger"></i>
+                                                <div class="d-flex flex-column justify-content-around">
+                                                    <small class="mb-1 text-muted">Revenue</small>
+                                                    <h5 class="mr-2 mb-0">$577545</h5>
+                                                </div>
+                                            </div>
+                                            <div class="d-flex py-3 border-md-right flex-grow-1 align-items-center justify-content-center p-3 item">
+                                                <i class="mdi mdi-flag mr-3 icon-lg text-danger"></i>
+                                                <div class="d-flex flex-column justify-content-around">
+                                                    <small class="mb-1 text-muted">Flagged</small>
+                                                    <h5 class="mr-2 mb-0">3497843</h5>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane fade" id="purchases" role="tabpanel" aria-labelledby="purchases-tab">
+                                        <div class="d-flex flex-wrap justify-content-xl-between">
+                                            <div class="d-none d-xl-flex border-md-right flex-grow-1 align-items-center justify-content-center p-3 item">
+                                                <i class="mdi mdi-calendar-heart icon-lg mr-3 text-primary"></i>
+                                                <div class="d-flex flex-column justify-content-around">
+                                                    <small class="mb-1 text-muted">Start date</small>
+                                                    <div class="dropdown">
+                                                        <a class="btn btn-secondary dropdown-toggle p-0 bg-transparent border-0 text-dark shadow-none font-weight-medium" href="#" role="button" id="dropdownMenuLinkA" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                            <h5 class="mb-0 d-inline-block">26 Jul 2018</h5>
+                                                        </a>
+                                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuLinkA">
+                                                            <a class="dropdown-item" href="#">12 Aug 2018</a>
+                                                            <a class="dropdown-item" href="#">22 Sep 2018</a>
+                                                            <a class="dropdown-item" href="#">21 Oct 2018</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="d-flex border-md-right flex-grow-1 align-items-center justify-content-center p-3 item">
+                                                <i class="mdi mdi-currency-usd mr-3 icon-lg text-danger"></i>
+                                                <div class="d-flex flex-column justify-content-around">
+                                                    <small class="mb-1 text-muted">Revenue</small>
+                                                    <h5 class="mr-2 mb-0">$577545</h5>
+                                                </div>
+                                            </div>
+                                            <div class="d-flex border-md-right flex-grow-1 align-items-center justify-content-center p-3 item">
+                                                <i class="mdi mdi-eye mr-3 icon-lg text-success"></i>
+                                                <div class="d-flex flex-column justify-content-around">
+                                                    <small class="mb-1 text-muted">Total views</small>
+                                                    <h5 class="mr-2 mb-0">9833550</h5>
+                                                </div>
+                                            </div>
+                                            <div class="d-flex border-md-right flex-grow-1 align-items-center justify-content-center p-3 item">
+                                                <i class="mdi mdi-download mr-3 icon-lg text-warning"></i>
+                                                <div class="d-flex flex-column justify-content-around">
+                                                    <small class="mb-1 text-muted">Downloads</small>
+                                                    <h5 class="mr-2 mb-0">2233783</h5>
+                                                </div>
+                                            </div>
+                                            <div class="d-flex py-3 border-md-right flex-grow-1 align-items-center justify-content-center p-3 item">
+                                                <i class="mdi mdi-flag mr-3 icon-lg text-danger"></i>
+                                                <div class="d-flex flex-column justify-content-around">
+                                                    <small class="mb-1 text-muted">Flagged</small>
+                                                    <h5 class="mr-2 mb-0">3497843</h5>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-
                         </div>
                     </div>
                 </div>
 
+
                 <div class="row">
-                    <div class="col-md-7 grid-margin stretch-card">
+                    <div class="col-md-6 stretch-card">
                         <div class="card">
                             <div class="card-body">
-                                <p class="card-title">To-do 진행률</p>
+                                <h4 class="card-title">Doing / Done</h4>
+
+                                <div class="table-responsive">
+                                    <table class="table table-hover">
+                                        <thead>
+                                        <tr>
+                                            <th>Doing</th>
+                                            <th>Done</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <td>TD/IDF RESEARCH</td>
+                                            <td><label class="badge badge-danger">SCRUMBLE EGG</label></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Messsy</td>
+                                            <td><label class="badge badge-warning">In progress</label></td>
+                                        </tr>
+                                        <tr>
+                                            <td>John</td>
+                                            <td><label class="badge badge-info">Fixed</label></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Peter</td>
+                                            <td><label class="badge badge-success">Completed</label></td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 grid-margin stretch-card">
+                            <div class="card">
+                            <div class="card-body">
+                                <p class="card-title">Sprint Time</p>
+                                <div class="progress">
+                                    <div class="progress-bar bg-success" role="progressbar" style="width: 30%" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                                <br><br><br>
+                                <p class="card-title">Sprint Progress</p>
                                 <div id="cash-deposits-chart-legend" class="d-flex justify-content-center pt-3"></div>
                                 <canvas id="pieChart"></canvas>
                             </div>
                         </div>
                     </div>
-
                 </div>
-
             </div>
             <!-- content-wrapper ends -->
             <!-- partial:partials/_footer.html -->
