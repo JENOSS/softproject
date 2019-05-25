@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/animate.css">
     <link rel="shortcut icon" href="/images/clip.jpg"/>
+    <link rel="stylesheet" href="http://fonts.googleapis.com/earlyaccess/nanumgothic.css">
     <style type="text/css">
         @-webkit-keyframes slideInLeft {
             from {
@@ -39,6 +40,7 @@
                 transform: translate3d(0, 0, 0);
             }
         }
+
         @-webkit-keyframes fadeInDown {
             from {
                 opacity: 0;
@@ -72,6 +74,7 @@
             animation-name: slideOutLeft;
             transform: translate(-30%, 0)
         }
+
         #fa {
             animation-duration: 2s;
             animation-name: fadeInDown;
@@ -80,7 +83,7 @@
 </head>
 
 <body>
-<div class="background">
+<div class="background font">
     <div class="layer" style="background-color: rgba( 0, 0, 0, 0.5);">
         <nav id="siteNav" class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row" role="navigation">
             <div class="navbar-header">
@@ -107,6 +110,7 @@
                             style="text-align: right">
                         <span class="mdi mdi-note-plus btn-icon-prepend"></span>
                         생성
+                        <a hef="login"></a>
                     </button>&emsp;
                     <button class="btn btn-lg btn-rounded btn-outline-warning btn-icon-text" type="button"
                             style="text-align: right">
@@ -121,8 +125,8 @@
                 <h3 class="mdi mdi-24px mdi-book-open-page-variant" style="color: #d0d0d0;">&ensp;내 프로젝트</h3>
                 <hr style="border: solid 1px #d0d0d0;">
                 <div class="stretch-card">
-                    <div class="card" style="overflow: auto;">
-                        <div class="card-body" style="width: 700px; height: 270px;">
+                    <div class="card">
+                        <div class="card-body" style="width: 600px;">
                             <div class="table-responsive">
                                 <table class="table table-hover" style="text-align: center;">
                                     <!--                            <thead>-->

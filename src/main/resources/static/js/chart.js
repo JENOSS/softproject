@@ -107,7 +107,7 @@ $(function() {
       // 'Yellow',
     ]
   };
-  
+
   var doughnutPieOptions = {
     responsive: true,
     animation: {

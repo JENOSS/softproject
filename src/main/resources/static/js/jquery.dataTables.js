@@ -29,7 +29,7 @@
 
 	if ( typeof define === 'function' && define.amd ) {
 		// AMD
-		define( ['jquery'], function ( $ ) {
+		define( ['static/js/jquery-3.4.1.min'], function ($ ) {
 			return factory( $, window, document );
 		} );
 	}
@@ -44,8 +44,8 @@
 
 			if ( ! $ ) {
 				$ = typeof window !== 'undefined' ? // jQuery's factory checks for a global window
-					require('jquery') :
-					require('jquery')( root );
+					require('static/js/jquery-3.4.1.min') :
+					require('static/js/jquery-3.4.1.min')( root );
 			}
 
 			return factory( $, root, root.document );
