@@ -68,9 +68,14 @@ public class TestController {
     }
 
     @GetMapping("/projectHome")
-    public String project(Model model) {
+    public String projectHome(Model model) {
         //model.addAttribute("userForm", new User());
         return "projectHome";
     }
 
+    @GetMapping("/scrumBoard")
+    public String scrumBoard(Model model) {
+        //model.addAttribute("userForm", new User());
+        return "scrumBoard";
+    }
 }
